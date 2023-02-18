@@ -1,13 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Silkscreen&display=swap');
+
+:root {
+  --background: rgb(92, 154, 47);
+  --white-100: white;
+  --white-50: rgba(255, 255, 255, 0.65);
+  --white-25: rgba(0, 0, 0, 0.25);
+  --gray: rgba(53, 53, 53, 0.677);
+
+}
+
+
 body {
+  background:  var(--background);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Fira Sans', sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.main-container {
+  z-index: 10;
+  /* size */
+  height: 90vh;
+  width: 90vw;
+
+  /* color */
+  background: var(--white-25);
+  /* center */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border */
+  border-radius: 1rem;
+  border: .1px solid var(--white-100);
+
+  /* flex box */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+
+}
+
+.main-content-50 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  width: 100%;
+  height: 100%;
+}
+
+.main-content-25 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  width: 50%;
+  height: 100%;
+}
+
+
+button {
+  background: none;
+  align-items: center;
+  padding: .9rem 1.2rem;
+  color: var(--white-100);
+
+
+  border-radius: 1.5rem;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+
+  cursor: pointer;
+
+  border: 1px solid var(--white-100);
+}
+
+button:hover {
+  background-color: var(--background);
+  cursor: pointer;
+}
+
+button a {
+  color: var(--white-100);
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p {
+  color: var(--white-50);
+}
+
+h1 {
+  color: var(--white-100);
+  /* margin: 0; */
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+
+
+
+@media screen and (max-width:600px) {
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+
+  .main-content-25 {
+    width: 100%;
+    height: 50%;
+  }
+
+
 }

@@ -1,0 +1,126 @@
+* {
+    transition: .3s;
+}
+
+
+.buttons-div,
+.texts-div {
+    width: 60%;
+    margin: 1rem;
+}
+
+.buttons-div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-links-div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.hello-text {
+    color: var(--white-50);
+    opacity: .5;
+    font-size: 1rem;
+}
+
+.job-text {
+    color: var(--white-50);
+    font-size: 1.5rem;
+
+}
+
+.name-text {
+    color: white;
+    font-size: 2.4rem;
+}
+
+
+
+.home-img {
+    height: 18rem;
+    width: 18rem;
+    border-radius: 50%;
+    background: var(--white-50);
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+    border: 3px solid var(--white-100);
+}
+
+
+
+.link-button {
+    background: none;
+    align-items: center;
+    padding: .9rem 1.2rem;
+    color: var(--white-100);
+
+
+    border-radius: 1.5rem;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+
+    cursor: pointer;
+
+    border: 1px solid var(--white-100);
+}
+
+.link-button:hover {
+    background-color: var(--background);
+    cursor: pointer;
+}
+
+.social-link {
+    color: var(--white-100);
+    opacity: 1;
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+.social-link:hover {
+    opacity: .5;
+}
+
+
+
+
+
+@media screen and (max-width:600px) {
+
+
+    .home-screen-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .link-button{
+        font-size: .7rem;
+        padding: .5rem 1rem;
+    }
+
+    .buttons-div,
+    .texts-div {
+        width: 95%;
+    }
+
+    button , a {
+        padding: .5rem;
+        font-size: .7rem;
+    }
+
+    img {
+        height: 15rem;
+        width: 15rem;
+    }
+
+
+
+
+
+}
