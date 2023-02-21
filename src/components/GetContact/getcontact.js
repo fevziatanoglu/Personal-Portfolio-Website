@@ -2,16 +2,18 @@ import { useRef } from "react";
 import MenuButton from "../Menu/menuButton";
 import emailjs from "@emailjs/browser"
 
+import ids from "./emailJS_ids.json"
 import "./getcontact.css"
 
 function GetContact() {
 
     const emailForm = useRef();
+    console.log(ids);
 
 
     const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm("service_ikc7gy8", "template_r20b7nq", emailForm.current, "EjKtsnAZGVYwTgOfo").then(response => { alert("Email sent. I will be return soon:)"); }).catch(error => alert("There is an error please try later :/ ."));
+        emailjs.sendForm(`${ids.SERVICE_ID}`, `${ids.TEMPLATE_ID}`, emailForm.current, `${ids.PUBLIC_ID}`).then(response => { alert("Email sent. I will be return soon:)"); }).catch(error => alert("There is an error please try later :/ ."));
         console.log(emailForm.current);
     }
 
