@@ -11,13 +11,15 @@
 
 
 body {
-  background:  var(--background);
+  background: var(--background);
   margin: 0;
   font-family: 'Fira Sans', sans-serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+
+  /* overflow: hidden; */
 }
 
 code {
@@ -25,12 +27,16 @@ code {
     monospace;
 }
 
+
+
 .main-container {
-  z-index: 10;
+
   /* size */
   height: 90vh;
   width: 90vw;
 
+  z-index: 200;
+  
   /* color */
   background: var(--white-25);
   /* center */
